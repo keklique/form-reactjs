@@ -13,7 +13,7 @@ function Sectors({ setSector, sector }: { setSector: Dispatch<SetStateAction<num
         className={`hover:bg-gray-300 w-full whitespace-pre cursor-pointer text-start ${(sctr.id === sector) ? "bg-gray-300" : ""}`} onClick={() => { sectorSelected(sctr.id) }}>{sctr.name}</span>);
 
     return (
-        <div className='h-full w-full flex flex-col items-start overflow-auto bg-gray-200/60 px-4 py-1'>
+        <div className='h-full w-full flex flex-col items-start overflow-auto bg-gray-200/60 px-4 py-1 text-sm md:text-md scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200'>
             
             {sectorList}
         </div>

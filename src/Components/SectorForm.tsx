@@ -55,7 +55,7 @@ function SectorForm() {
             }
             else
             {
-                toast.error('Please fill inputs', {
+                toast.error('Please fill all fields', {
                     position: "top-left",
                     autoClose: 5000,
                     hideProgressBar: true,
@@ -101,20 +101,20 @@ function SectorForm() {
     }
 
     return (
-        <div className='flex h-full max-h-[60%] w-full sm:rounded-lg sm:w-[40rem] sm:h-80 bg-gray-100 p-6 '>
+        <div className='flex h-full max-h-[60%] w-full sm:rounded-lg sm:w-[40rem] sm:h-100 bg-gray-100 p-6 '>
             <form onSubmit={onSubmit} className='flex flex-col space-y-4 h-full w-full '>
                 <div className='flex flex-row items-start whitespace-pre space-x-5'>
-                    <span className='font-semibold'>Name: </span>
-                    <input type="text" placeholder='Name' id='name' onChange={onInputChange} ref={nameInput} className="outline-gray-200 w-60 border border-gray-200 px-3"/>
+                    <span className='font-semibold text-gray-700/80'>Name: </span>
+                    <input type="text" placeholder='Name' id='name' onChange={onInputChange} ref={nameInput} className="outline-none w-60 border border-gray-200 px-3"/>
                 </div>
-                <span className='font-semibold self-start'>Sector</span>
+                <span className='font-semibold self-start text-gray-700/80 whitespace-pre'>Sector: </span>
                 <Sectors setSector={setSector} sector={sector} />
                 <div className='flex flex-row self-start space-x-2'>
                     <span className='font-semibold'>Agree to terms</span>
                     <input type="checkbox" name="Agree to terms" ref={agrementInput} onChange={onInputChange} />
                 </div>
 
-                <button className={`w-32 transition-all duration-200 rounded-lg text-white p-2 ${isValidated ? "bg-green-500" : "bg-gray-500"}`}>Save</button>
+                <button className={`w-32 transition-all duration-500 rounded-lg text-white p-2 ${isValidated ? "bg-green-500" : "bg-gray-200 text-gray-400  cursor-not-allowed"}`}>Save</button>
             </form>
             <ToastContainer/>
         </div>

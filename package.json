@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "json-loader": "^0.5.7",
+    "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4"
   }
 }

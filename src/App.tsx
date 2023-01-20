@@ -5,7 +5,7 @@ import SectorForm from './Components/SectorForm';
 
 function App() {
   return (
-    <div className="App w-full h-screen flex flex-col justify-center items-center bg-gray-500">
+    <div className="App w-full h-screen flex flex-col justify-center items-center bg-slate-500">
       <SectorForm/>
     </div>
   );
